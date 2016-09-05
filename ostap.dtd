@@ -1,0 +1,32 @@
+<!ELEMENT test (author|description|speciality|criteria|section)*>
+<!ATTLIST test
+        name CDATA #REQUIRED
+        alias CDATA #REQUIRED
+        mode CDATA #REQUIRED
+        skip CDATA #REQUIRED
+        random CDATA #REQUIRED
+        time CDATA #REQUIRED
+        lang CDATA #REQUIRED>
+<!ELEMENT author (#PCDATA)>
+<!ATTLIST author
+        email CDATA #REQUIRED
+        url CDATA #REQUIRED
+        date CDATA #REQUIRED>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT speciality (spec)*>
+<!ELEMENT spec (#PCDATA)>
+<!ATTLIST spec
+        id CDATA #REQUIRED>
+<!ELEMENT criteria (mark)*>
+<!ELEMENT mark (#PCDATA)>
+<!ATTLIST mark
+        name CDATA #REQUIRED>
+<!ELEMENT section (question)*>
+<!ELEMENT question (answer|question)*>
+<!ATTLIST question
+        cost CDATA #REQUIRED
+        open CDATA #REQUIRED
+        text CDATA #REQUIRED>
+<!ELEMENT answer (#PCDATA)>
+<!ATTLIST answer
+        right CDATA #REQUIRED>
