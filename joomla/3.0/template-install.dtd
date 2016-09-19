@@ -28,10 +28,16 @@
 <!ATTLIST language
 	tag CDATA #REQUIRED
 >
-<!ELEMENT params (param)*>
-<!ELEMENT param (#PCDATA | option)*>
-<!ATTLIST param
-	name NMTOKEN #REQUIRED
+<!ELEMENT fields ( fieldset )* >
+<!ATTLIST fieldset
+	name CDATA #REQUIRED >
+
+<!ELEMENT fieldset ( field )* >
+<!ATTLIST field
+	name CDATA #REQUIRED >
+
+<!ELEMENT field ( #PCDATA | option )* >
+<!ATTLIST field	name NMTOKEN #REQUIRED
 	type NMTOKEN #REQUIRED
 	label CDATA #REQUIRED
 	size NMTOKEN #IMPLIED
