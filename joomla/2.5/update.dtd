@@ -1,0 +1,24 @@
+<!ELEMENT updates (update)*>
+        <!ELEMENT update (name|description|element|type|version|infourl|downloads|tags|maintainer|maintainerurl|targetplatform)*>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT description (#PCDATA)>
+        <!ELEMENT element (#PCDATA)>
+        <!ELEMENT type (#PCDATA)>
+        <!ELEMENT version (#PCDATA)>
+        <!ELEMENT infourl (#PCDATA)>
+        <!ATTLIST infourl
+                title CDATA #REQUIRED>
+        <!ELEMENT downloads (downloadurl)*>
+        <!ELEMENT downloadurl (#PCDATA)>
+        <!ATTLIST downloadurl
+                format CDATA #REQUIRED
+                type CDATA #REQUIRED>
+        <!ELEMENT tags (tag)*>
+        <!ELEMENT tag (#PCDATA)>
+        <!ELEMENT maintainer (#PCDATA)>
+        <!ELEMENT maintainerurl (#PCDATA)>
+        <!ELEMENT targetplatform (#PCDATA)>
+        <!ATTLIST targetplatform
+                name CDATA #REQUIRED
+                version CDATA #REQUIRED>
+        ]>
