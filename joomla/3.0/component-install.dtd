@@ -1,4 +1,4 @@
-<!ELEMENT extension ((name, creationDate, author, authorEmail, authorUrl, copyright, license, version, description, installfile, uninstallfile, install, uninstall, files*, languages*, media*, administration, params?) | (sql | queries))+>
+<!ELEMENT extension ((name, creationDate, author, authorEmail, authorUrl, copyright, license, version, description, installfile, uninstallfile, uninstall, files*, languages*, media*, administration, config?) | (sql | queries))+>
 <!ATTLIST extension
 	type NMTOKEN #FIXED "component"
 	version CDATA #IMPLIED
@@ -58,6 +58,9 @@
 >
 <!ELEMENT installfile (#PCDATA)>
 <!ELEMENT uninstallfile (#PCDATA)>
+
+<!ELEMENT config ( fields )* >
+
 <!ELEMENT fields ( fieldset )* >
 <!ATTLIST fieldset 
 	name CDATA #REQUIRED >

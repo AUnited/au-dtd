@@ -1,4 +1,4 @@
-<!ELEMENT extension (name, creationDate, author, authorEmail, authorUrl, copyright, license, version, description, files*, languages*, media*, params?) >
+<!ELEMENT extension (name, creationDate, author, authorEmail, authorUrl, copyright, license, version, description, files*, languages*, media*, config?) >
 <!ATTLIST extension
 	type NMTOKEN #FIXED 'module'
 	client NMTOKEN #IMPLIED
@@ -32,6 +32,8 @@
 <!ATTLIST media
 	destination NMTOKEN #IMPLIED
 	folder NMTOKEN #IMPLIED >
+
+<!ELEMENT config ( fields )* >
 
 <!ELEMENT fields ( fieldset )* >
 <!ATTLIST fieldset 

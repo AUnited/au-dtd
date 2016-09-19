@@ -1,4 +1,4 @@
-<!ELEMENT extension (name,creationDate,author,authorEmail,authorUrl,copyright,license,version,description,files*,languages*,administration*,positions*,params*)>
+<!ELEMENT extension (name,creationDate,author,authorEmail,authorUrl,copyright,license,version,description,files*,languages*,administration*,positions*,config*)>
 <!ATTLIST extension
 	type NMTOKEN #FIXED "template"
 	client (site|administrator) "site"
@@ -28,6 +28,9 @@
 <!ATTLIST language
 	tag CDATA #REQUIRED
 >
+
+<!ELEMENT config ( fields )* >
+
 <!ELEMENT fields ( fieldset )* >
 <!ATTLIST fieldset
 	name CDATA #REQUIRED >
