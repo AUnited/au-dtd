@@ -63,6 +63,8 @@
 	name CDATA #REQUIRED >
 
 <!ELEMENT config ( fields )* >
+<!ATTLIST fields
+	name CDATA #REQUIRED >
 
 <!ELEMENT fieldset ( field )* >
 <!ATTLIST field 

@@ -34,6 +34,8 @@
 	folder NMTOKEN #IMPLIED >
 
 <!ELEMENT config ( fields )* >
+<!ATTLIST fields
+	name CDATA #REQUIRED >
 
 <!ELEMENT fields ( fieldset )* >
 <!ATTLIST fieldset 
