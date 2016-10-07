@@ -1,0 +1,74 @@
+<!ELEMENT extension (name, creationDate, author, authorEmail, authorUrl, copyright, license, version, description, files*, languages*, media*, config?) >
+<!ATTLIST extension
+	type NMTOKEN #FIXED 'module'
+	client NMTOKEN #IMPLIED
+	version CDATA #IMPLIED >
+
+<!ELEMENT name ( #PCDATA ) >
+<!ELEMENT creationDate ( #PCDATA ) >
+<!ELEMENT author ( #PCDATA ) >
+<!ELEMENT authorEmail ( #PCDATA ) >
+<!ELEMENT authorUrl ( #PCDATA ) >
+<!ELEMENT copyright ( #PCDATA ) >
+<!ELEMENT license ( #PCDATA ) >
+<!ELEMENT version ( #PCDATA ) >
+<!ELEMENT description ( #PCDATA ) >
+
+<!ELEMENT files ( filename | folder )* >
+<!ATTLIST files folder NMTOKEN #IMPLIED >
+
+<!ELEMENT folder ( #PCDATA ) >
+<!ELEMENT filename ( #PCDATA ) >
+<!ATTLIST filename
+	module NMTOKEN #IMPLIED >
+
+<!ELEMENT languages ( language )+ >
+<!ATTLIST languages folder NMTOKEN #IMPLIED >
+
+<!ELEMENT language ( #PCDATA ) >
+<!ATTLIST language tag CDATA #REQUIRED >
+
+<!ELEMENT media ( filename )* >
+<!ATTLIST media
+	destination NMTOKEN #IMPLIED
+	folder NMTOKEN #IMPLIED >
+
+<!ELEMENT config ( fields )* >
+<!ATTLIST fields
+	name CDATA #REQUIRED >
+
+
+<!ELEMENT fields ( fieldset )* >
+<!ATTLIST fieldset 
+	name CDATA #REQUIRED >
+
+<!ELEMENT fieldset ( field )* >
+<!ATTLIST field 
+	name CDATA #REQUIRED >
+
+<!ELEMENT field ( #PCDATA | option )* >
+<!ATTLIST field
+	name NMTOKEN #REQUIRED
+	type NMTOKEN #REQUIRED
+	label CDATA #REQUIRED
+	size NMTOKEN #IMPLIED
+	id NMTOKEN #IMPLIED
+	class NMTOKEN #IMPLIED
+	default CDATA #IMPLIED
+	description CDATA #IMPLIED
+	section NMTOKEN #IMPLIED
+	scope NMTOKEN #IMPLIED
+	directory CDATA #IMPLIED
+	filter CDATA #IMPLIED
+	exclude CDATA #IMPLIED
+	stripext CDATA #IMPLIED
+	hide_none NMTOKEN #IMPLIED
+	hide_default NMTOKEN #IMPLIED
+	client NMTOKEN #IMPLIED
+	menu_type NMTOKEN #IMPLIED
+	state NMTOKEN #IMPLIED
+	rows NMTOKEN #IMPLIED
+	cols NMTOKEN #IMPLIED >
+
+<!ELEMENT option ( #PCDATA ) >
+<!ATTLIST option value CDATA #IMPLIED >
