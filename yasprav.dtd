@@ -1,0 +1,118 @@
+<!ELEMENT companies (company)*>
+        <!ATTLIST companies
+                xmlns:xi CDATA #REQUIRED
+                version CDATA #REQUIRED>
+        <!ELEMENT company (company-id|name|name-other|address|locality-name|country|admn-area|sub-admn-area|sub-locality-name|house|house-add|corps|build|possession|km|address-add|coordinates|phone|email|url|add-url|info-page|working-time|rubric-id|actualization-date|photos|feature-boolean|feature-enum-single|feature-numeric-single|feature-enum-multiple|feature-in-units-single|feature-in-units-multiple|feature-range-single|feature-range-multiple|feature-range-in-units-single|feature-range-in-units-multiple)*>
+        <!ELEMENT company-id (#PCDATA)>
+        <!ELEMENT name (#PCDATA)>
+        <!ATTLIST name
+                lang CDATA #REQUIRED>
+        <!ELEMENT name-other (#PCDATA)>
+        <!ATTLIST name-other
+                lang CDATA #REQUIRED>
+        <!ELEMENT address (#PCDATA)>
+        <!ATTLIST address
+                lang CDATA #REQUIRED>
+        <!ELEMENT locality-name (#PCDATA)>
+        <!ATTLIST locality-name
+                lang CDATA #REQUIRED>
+        <!ELEMENT country (#PCDATA)>
+        <!ATTLIST country
+                lang CDATA #REQUIRED>
+        <!ELEMENT admn-area (#PCDATA)>
+        <!ATTLIST admn-area
+                lang CDATA #REQUIRED>
+        <!ELEMENT sub-admn-area (#PCDATA)>
+        <!ATTLIST sub-admn-area
+                lang CDATA #REQUIRED>
+        <!ELEMENT sub-locality-name (#PCDATA)>
+        <!ATTLIST sub-locality-name
+                lang CDATA #REQUIRED>
+        <!ELEMENT house (#PCDATA)>
+        <!ELEMENT house-add (#PCDATA)>
+        <!ELEMENT corps (#PCDATA)>
+        <!ELEMENT build (#PCDATA)>
+        <!ELEMENT possession (#PCDATA)>
+        <!ELEMENT km (#PCDATA)>
+        <!ELEMENT address-add (#PCDATA)>
+        <!ATTLIST address-add
+                lang CDATA #REQUIRED>
+        <!ELEMENT coordinates (lon|lat)*>
+        <!ELEMENT lon (#PCDATA)>
+        <!ELEMENT lat (#PCDATA)>
+        <!ELEMENT phone (number|ext|info|type)*>
+        <!ELEMENT number (#PCDATA)>
+        <!ELEMENT ext (#PCDATA)>
+        <!ELEMENT info (#PCDATA)>
+        <!ELEMENT type (#PCDATA)>
+        <!ELEMENT email (#PCDATA)>
+        <!ELEMENT url (#PCDATA)>
+        <!ELEMENT add-url (#PCDATA)>
+        <!ELEMENT info-page (#PCDATA)>
+        <!ELEMENT working-time (#PCDATA)>
+        <!ATTLIST working-time
+                lang CDATA #REQUIRED>
+        <!ELEMENT rubric-id (#PCDATA)>
+        <!ELEMENT actualization-date (#PCDATA)>
+        <!ELEMENT photos (photo)*>
+        <!ATTLIST photos
+                gallery-url CDATA #REQUIRED>
+        <!ELEMENT photo (#PCDATA)>
+        <!ATTLIST photo
+                alt CDATA #IMPLIED
+                type CDATA #IMPLIED
+                url CDATA #REQUIRED>
+        <!ELEMENT feature-boolean (#PCDATA)>
+        <!ATTLIST feature-boolean
+                name CDATA #REQUIRED
+                value CDATA #REQUIRED>
+        <!ELEMENT feature-enum-single (#PCDATA)>
+        <!ATTLIST feature-enum-single
+                name CDATA #REQUIRED
+                value CDATA #REQUIRED>
+        <!ELEMENT feature-numeric-single (#PCDATA)>
+        <!ATTLIST feature-numeric-single
+                name CDATA #REQUIRED
+                value CDATA #REQUIRED>
+        <!ELEMENT feature-enum-multiple (#PCDATA)>
+        <!ATTLIST feature-enum-multiple
+                name CDATA #REQUIRED
+                value CDATA #REQUIRED>
+        <!ELEMENT feature-in-units-single (#PCDATA)>
+        <!ATTLIST feature-in-units-single
+                name CDATA #REQUIRED
+                unit CDATA #REQUIRED
+                unit-value CDATA #REQUIRED
+                value CDATA #REQUIRED>
+        <!ELEMENT feature-in-units-multiple (#PCDATA)>
+        <!ATTLIST feature-in-units-multiple
+                name CDATA #REQUIRED
+                unit CDATA #REQUIRED
+                unit-value CDATA #REQUIRED
+                value CDATA #REQUIRED>
+        <!ELEMENT feature-range-single (#PCDATA)>
+        <!ATTLIST feature-range-single
+                name CDATA #REQUIRED
+                from CDATA #REQUIRED
+                to CDATA #REQUIRED>
+        <!ELEMENT feature-range-multiple (#PCDATA)>
+        <!ATTLIST feature-range-multiple
+                name CDATA #REQUIRED
+                unit CDATA #REQUIRED
+                unit-value CDATA #REQUIRED
+                from CDATA #REQUIRED
+                to CDATA #REQUIRED>
+        <!ELEMENT feature-range-in-units-single (#PCDATA)>
+        <!ATTLIST feature-range-in-units-single
+                name CDATA #REQUIRED
+                unit CDATA #REQUIRED
+                unit-value CDATA #REQUIRED
+                from CDATA #REQUIRED
+                to CDATA #REQUIRED>
+        <!ELEMENT feature-range-in-units-multiple (#PCDATA)>
+        <!ATTLIST feature-range-in-units-multiple
+                name CDATA #REQUIRED
+                unit CDATA #REQUIRED
+                unit-value CDATA #REQUIRED
+                from CDATA #REQUIRED
+                to CDATA #REQUIRED>
