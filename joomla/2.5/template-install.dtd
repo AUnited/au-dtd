@@ -1,4 +1,4 @@
-<!ELEMENT extension (name,creationDate,author,authorEmail,authorUrl,copyright,license,version,description,files*,languages*,administration*,positions*,config*)>
+<!ELEMENT extension (name,creationDate,author,authorEmail,authorUrl,copyright,license,version,description,files*,languages*,administration*,positions*,config*, updateservers)>
 <!ATTLIST extension
 	type NMTOKEN #FIXED "template"
 	client (site|administrator) "site"
@@ -71,3 +71,10 @@
 >
 <!ELEMENT positions (position)*>
 <!ELEMENT position (#PCDATA)>
+
+<!ELEMENT updateservers (server)*>
+<!ELEMENT server (#PCDATA)>
+<!ATTLIST server
+	type CDATA #REQUIRED
+	priority CDATA #IMPLIED
+	name CDATA #REQUIRED>

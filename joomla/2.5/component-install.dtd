@@ -1,4 +1,4 @@
-<!ELEMENT extension ((name, creationDate, author, authorEmail, authorUrl, copyright, license, version, description, installfile, uninstallfile, uninstall, files*, languages*, media*, administration, config?) | (sql | queries))+>
+<!ELEMENT extension ((name, creationDate, author, authorEmail, authorUrl, copyright, license, version, description, installfile, uninstallfile, uninstall, files*, languages*, media*, administration, config, updateservers?) | (sql | queries))+>
 <!ATTLIST extension
 	type NMTOKEN #FIXED "component"
 	version CDATA #IMPLIED
@@ -98,3 +98,10 @@
 <!ATTLIST option
 	value CDATA #IMPLIED
 >
+
+<!ELEMENT updateservers (server)*>
+<!ELEMENT server (#PCDATA)>
+<!ATTLIST server
+	type CDATA #REQUIRED
+	priority CDATA #IMPLIED
+	name CDATA #REQUIRED>
