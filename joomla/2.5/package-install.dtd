@@ -1,0 +1,22 @@
+<!ELEMENT extension (name|packagename|version|creationDate|url|authorUrl|packager|packagerurl|description|files)*>
+        <!ATTLIST extension
+                type CDATA #REQUIRED
+                version CDATA #REQUIRED
+                method CDATA #REQUIRED>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT packagename (#PCDATA)>
+        <!ELEMENT version (#PCDATA)>
+        <!ELEMENT creationDate (#PCDATA)>
+        <!ELEMENT url (#PCDATA)>
+        <!ELEMENT authorUrl (#PCDATA)>
+        <!ELEMENT packager (#PCDATA)>
+        <!ELEMENT packagerurl (#PCDATA)>
+        <!ELEMENT description (#PCDATA)>
+        <!ELEMENT files (file)*>
+        <!ATTLIST files
+                folder CDATA #REQUIRED>
+        <!ELEMENT file (#PCDATA)>
+        <!ATTLIST file
+                group CDATA #IMPLIED
+                id CDATA #REQUIRED
+                type CDATA #REQUIRED>
