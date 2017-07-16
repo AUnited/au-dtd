@@ -1,0 +1,25 @@
+<!ELEMENT extension (name|author|creationDate|authorEmail|authorUrl|license|platform|games|contributors|version|description)*>
+        <!ATTLIST extension
+                type CDATA #REQUIRED
+                section CDATA #REQUIRED>
+        <!ELEMENT name (#PCDATA)>
+        <!ATTLIST name
+                email CDATA #IMPLIED
+                level CDATA #IMPLIED
+                url CDATA #IMPLIED>
+        <!ELEMENT author (#PCDATA)>
+        <!ELEMENT creationDate (#PCDATA)>
+        <!ELEMENT authorEmail (#PCDATA)>
+        <!ELEMENT authorUrl (#PCDATA)>
+        <!ELEMENT license (#PCDATA)>
+        <!ELEMENT platform (#PCDATA)>
+        <!ELEMENT games (game)*>
+        <!ELEMENT game (#PCDATA)>
+        <!ATTLIST game
+                alias CDATA #REQUIRED>
+        <!ELEMENT contributors (name)*>
+        <!ELEMENT version (#PCDATA)>
+        <!ELEMENT description (fulldesc)*>
+        <!ELEMENT fulldesc (#PCDATA)>
+        <!ATTLIST fulldesc
+                language CDATA #REQUIRED>
